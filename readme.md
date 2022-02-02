@@ -21,6 +21,14 @@ The 3d object has a total of 3180 vertices with each vertice having 3 co-ordinat
 
 ![Output](output.png)
 
+### Link to the code
+
+[a link](https://github.com/grahul27/MM804-Assignment-1)
+
+### Reference to readme file
+
+[a link](https://github.com/grahul27/MM804-Assignment-1/blob/master/readme.md)
+
 ### Development Environment
 
 - Python - 3.10.0
