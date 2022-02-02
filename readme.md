@@ -23,11 +23,11 @@ The 3d object has a total of 3180 vertices with each vertice having 3 co-ordinat
 
 ### Link to the code
 
-[a link](https://github.com/grahul27/MM804-Assignment-1)
+[https://github.com/grahul27/MM804-Assignment-1]
 
 ### Reference to readme file
 
-[a link](https://github.com/grahul27/MM804-Assignment-1/blob/master/readme.md)
+[https://github.com/grahul27/MM804-Assignment-1/blob/master/readme.md]
 
 ### Development Environment
 
