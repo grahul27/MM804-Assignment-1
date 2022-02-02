@@ -45,19 +45,19 @@ def CreateViewPort(reader,writeFileName,x_rotate=-90,y_rotate=0,z_rotate=0):
     mapper = vtk.vtkPolyDataMapper()
     mapper.SetInputConnection(normals.GetOutputPort())
     
-    #  actors for various port views - wireframe, Gouraud, Flat, Phong
+    # creating multiple actors for various views - wireframe, Gouraud, Flat, Phong
     wireframe_actor = vtk.vtkActor()
     flat_actor = vtk.vtkActor()
     gouraud_actor = vtk.vtkActor()
     phong_actor = vtk.vtkActor()
 
-    #Actor 1
+    #For Wireframe
     mapper.SetInputConnection(reader.GetOutputPort())
     wireframe_actor.SetMapper(mapper)
     wireframe_actor = rotateObject(wireframe_actor,x_rotate,y_rotate,z_rotate)
     wireframe_actor.GetProperty().SetRepresentationToWireframe()
 
-    # Actor 2
+    # For Flat shading
     flat_actor.SetMapper(mapper)
 
     flat_properties = flat_actor.GetProperty()
@@ -108,11 +108,11 @@ def CreateViewPort(reader,writeFileName,x_rotate=-90,y_rotate=0,z_rotate=0):
     renderWindow.AddRenderer(render_phong)
     renderWindow.Render()
 
-    # Save As Image
+    # Save the output as image
     to_image = vtk.vtkWindowToImageFilter()
     to_image.SetInput(renderWindow)
     to_image.Update()
-
+    # creating image into a output file
     jwriter = vtk.vtkJPEGWriter()    
     jwriter.SetInputData(to_image.GetOutput())
     jwriter.SetFileName(writeFileName)

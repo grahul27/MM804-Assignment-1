@@ -17,7 +17,7 @@ Refer Assignment1.pdf for more details on the question
 
 ### Output
 
-The 3d object has a total of 9540 vertices and the size of the file is 211kb
+The 3d object has a total of 3180 vertices with each vertice having 3 co-ordinates x,y,z and the size of the file is 211kb.
 
 ![Output](output.png)
 
